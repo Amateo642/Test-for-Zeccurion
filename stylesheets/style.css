@@ -1,0 +1,587 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+    
+        /*header*/
+
+.header {
+    height: 51px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 0 23px;
+}
+
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.logo img {
+    margin: 10px;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.human {
+    display: flex;
+    height: 32px;
+    width: 32px;
+    background-color: #C4C4C4;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.user p {
+    margin: 0 10px 0 10px;
+}
+
+.user .logout {
+    height: 15px;
+    width: 15px;
+}
+
+.breadcrumbs {
+    height: 48px;
+    display: flex;
+    background: #F3F2ED;
+    color: #707478;
+    font-size: 13px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.breadcrumbs .link {
+    color: #058DC7;
+    text-decoration: none;
+}
+
+i {
+    border: solid #707478;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 0 5px 0 5px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+        /*wrapper*/
+
+.wrapper {
+    height: calc(100% - 99px);
+    display: flex;
+    flex-direction: row;
+}
+
+        /*aside*/
+
+.sidebar {
+    width: 340px;
+    border-right: 1px solid #E4E4E4;
+}
+
+.search {
+    display: flex;
+}
+
+.search input{
+    flex: 1 0 auto;
+    border: none;
+}
+
+.search img {
+    margin: 0 5px 0 15px;
+}
+
+.employee {
+    height: 88px;
+    display: flex;
+    background: #E7E6E1;
+    line-height: 5px;
+    align-items: center;
+    padding: 0 27px 0 29px;
+    cursor: pointer;
+    border-bottom: 1px solid #DFDBDC;
+}
+
+.employee.active {
+    background: #FFFFFF;
+}
+
+
+.employee .picture {
+    margin-right: 12px;
+}
+
+.employee .text {
+    flex: 1 0 auto;
+}
+
+.employee img {
+    height: 50px;
+    width: 50px;
+}
+
+.employee:not(.active) img {
+    opacity: 0.5;
+}
+
+.employee .name {
+    color: #058DC7;
+    font-size: 13px;
+    position: relative;
+}
+
+.employee.active .name::after {
+    content: " ";
+    background: url("/images/eye.svg");
+    height: 11px;
+    width: 16px;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.employee:not(.active) .name {
+    opacity: 0.5;
+}
+
+.position {
+    color: #808080;
+    font-size: 13px;
+}
+
+.status {
+    margin-top: 10px;
+}
+
+.employee:not(.active) .status {
+    opacity: 0.5;
+}
+
+.status .dismissal {
+    background: #D2154F;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 3px;
+}
+
+.employee .vacation {
+    color: #FFFFFF;
+    background-color: #2DD0C6;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 3px;
+}
+
+.number {
+    color:#A2A2A2;
+    font-size: 17px;
+}
+
+.employee.active .number {
+    color: #EE144E;
+}
+
+        /*main*/
+
+.content {
+    flex: 1 0 auto;
+    max-width: calc(100% - 340px);
+}
+
+.activity {
+    display: flex;
+    height: 142px;
+    border-bottom: 2px solid #E4E4E4;
+    padding-left: 21px;
+}
+
+.activity .person {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 140px;
+}
+
+.person-photo-status {
+    position: relative;
+    margin: 5px;
+}
+
+.person-photo {
+    border-radius: 50%;
+}
+
+.person-photo img {
+    height: 50px;
+    width: 50px;
+}
+
+.person-status {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    background: white;
+    border-radius: 50%;
+}
+
+.person-name .name {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.productivity {
+    flex: 1 0 auto;
+    padding: 0 20px;
+    margin-left: auto;
+}
+
+.activity .upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper-left p {
+    color:#808080;
+    font-size: 12px;
+}
+
+.upper-left span {
+    color: #3E3E3E;
+    font-size: 13px;
+}
+
+.backlink .link {
+    color: #058DC7;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.backlink .link img {
+    margin-right: 7px;
+}
+
+.activity .percents {
+    display: flex;
+    align-items: center;
+}
+
+.right-line {
+    height: 37px;
+    border-right: 1px solid #C6C6C6;
+    margin-right: 40px;
+}
+
+.percents .block {
+    flex: 1 0 auto;
+    position: relative;
+}
+
+.percents .block:not(:last-child)::after {
+    content: "";
+    height: 37px;
+    border-right: 1px solid #C6C6C6;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+
+.percents .stonk-up {
+    display: flex;
+    flex-direction: column;
+}
+
+.percents-title {
+    color:#C6C6C6;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.risk-number {
+    font-size: 18px;
+}
+
+.red-percent {
+    color: #D2154F;
+    font-size: 10px;
+    position: relative;
+}
+
+.grey-percent {
+    color: #3E3E3E;
+    font-size: 10px;
+    position: relative;
+}
+
+.arrow-status {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 9px;
+    height: 4px;
+}
+
+.percents .controls {
+    display: flex;
+    flex: 0 0 150px;
+    align-items: center;
+}
+
+.controls img {
+    margin-left: 15px;
+}
+
+.main {
+    margin-left: 39px;
+}
+
+.anomaly {
+    margin-top: 33px;
+}
+
+.anomaly h1 {
+    margin-bottom: 20px;
+}
+
+.title {
+    color: #4D4D4D;
+    font-size: 18px;
+}
+
+.blocks {
+    display: flex;
+    flex-direction: row;
+}
+
+.anomaly .block {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 100px;
+    min-height: 74px;
+    border: 1px solid #ee144e;
+    margin-right: 20px;
+    font-size: 13px;
+    align-items: center;
+    padding: 12px;
+}
+
+.anomaly .block p {
+    margin: 0;
+}
+
+.block .picture {
+    margin-right: 14px;
+}
+
+.main-indicators {
+    margin-top: 73px;
+}
+
+.main-indicators h1 {
+    margin-bottom: 12px;
+}
+
+.main-indicators .empty {
+    display: flex;
+    height: 195px;
+    background: #F3F2F2;
+    color: #989898;
+    font-size: 13px;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-statistics {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.statistic {
+    margin-right: 50px;
+}
+
+.apps-statistic {
+    display: flex;
+    flex-direction: column;
+}
+
+.apps {
+    display: flex;
+    flex-direction: column;
+}
+
+.apps .block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.square {
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+}
+
+
+
+.time-statistics .color-1 {
+    background: #F8D77F;
+}
+
+.time-statistics .color-2 {
+    background: #F689A8;
+}
+
+.time-statistics .color-3 {
+    background: #A6C8B3;
+}
+
+.time-statistics .statistic {
+    flex: 1 0 auto;
+}
+
+table {
+    font-size: 13px;
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+}
+
+th {
+    border-bottom: 1px solid #D1CFD7;
+}
+
+td {
+    border-bottom: 1px solid #D1CFD7;
+    padding: 7px 7px;
+    transition: .3s linear;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 200px;
+    text-overflow: ellipsis;
+}
+
+.discipline .cell-red {
+    color: #EE144E;
+    font-size: 10px;
+}
+
+.discipline .cell-green {
+    color: #00983E;
+    font-size: 10px;
+}
+
+@media (max-width: 1200px) {
+    .breadcrumbs {
+        max-width: 100%;
+    }
+
+    .activity .upper {
+        justify-content: left;
+    }
+
+    .activity .percents {
+        flex: 1 0 auto;
+    }
+
+    .percents .block {
+        margin-right: 5px;
+    }
+
+    .percents .block:not(:last-child)::after {
+        right: 0;
+    }
+
+    .percents .controls {
+        flex-direction: column;
+        flex: 1 1 0;
+    }
+
+    .controls img {
+        margin: 2px;
+        
+    }
+
+    .anomaly {
+        margin-top: 150px;
+    }
+
+    .time-statistics {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .statistic {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 950px) {
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .activity {
+        min-height: 300px;
+        width: 100%;
+    }
+
+    .productivity .upper {
+        flex-direction: column;
+    }
+
+    .productivity .percents {
+        display: block;
+    }
+
+    .anomaly .blocks {
+        flex-wrap: wrap;
+    }
+
+    .percents .block {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .percents .controls {
+        flex-direction: row;
+    }
+
+}
